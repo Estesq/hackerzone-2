@@ -1,0 +1,18 @@
+.hacktab {
+  background-color: rgba(85, 84, 84, 0.302);
+
+  &-link {
+    color: white;
+    &:hover {
+      color: aqua;
+    }
+  }
+  &-light {
+    background: #e5e5e5 !important;
+    color: black;
+  }
+  &-dark {
+    background: black;
+    color: #e5e5e5 !important;
+  }
+}

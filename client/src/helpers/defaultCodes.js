@@ -1,0 +1,2 @@
+exports.pythonScript = "if __name__==\"__main__\":\r\n\r    ## stdin\r\n\r    ## T=input()\r\n\r    ## stdout\r\n\r    ## print(T)\r"
+exports.jscript = "process.stdin.resume();\r\nprocess.stdin.setEncoding('ascii');\r\n/* var stdin = ''; */\r\n\r\nprocess.stdin.on('data', function (data) {\r\n    /* stdin += data.toString(); */\r\n})\r\nprocess.stdin.on('end', function () {\r\n   \r\n   /*  process.stdout.write(stdin) */\r\n})\r\n"

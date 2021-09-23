@@ -1,0 +1,141 @@
+@mixin placeholder {
+  ::-webkit-input-placeholder {
+    @content;
+  }
+  :-moz-placeholder {
+    @content;
+  }
+  ::-moz-placeholder {
+    @content;
+  }
+  :-ms-input-placeholder {
+    @content;
+  }
+}
+.btn-hack {
+  background-color: #88a0ff !important;
+  color: #fff !important;
+  border-color: #005e9d !important;
+}
+.btn-hack:focus,
+.btn-hack:hover {
+  background-color: #fff;
+  color: #005e9d;
+  border-color: #31347b;
+}
+.bg-hacktone {
+  input {
+    @include placeholder {
+      color: red;
+    }
+  }
+}
+.bg-hacktone {
+  background-color: #2d5bb280;
+  border: 0;
+  color: white;
+}
+
+.login a {
+  color: #000;
+}
+
+.hz-toogle {
+  filter: invert(100%);
+}
+.hz-mobile-menu {
+  height: calc(100vh - 60px);
+  &-item {
+    font-size: 1.2em;
+    font-weight: 700;
+  }
+}
+a.hz-link {
+  color: white;
+  text-decoration: none;
+}
+a.hz-link:hover {
+  text-shadow: 1px 1px 1px purple;
+  text-decoration: none;
+}
+.bg-outline-hack {
+  background-color: #fff !important;
+  color: #005e9d !important;
+  border-color: #31347b !important;
+}
+
+//colors
+$color_lima_approx: #00ff09;
+@mixin keyframes($animation-name) {
+  @-webkit-keyframes #{$animation-name} {
+    @content;
+  }
+  @-moz-keyframes #{$animation-name} {
+    @content;
+  }
+  @-ms-keyframes #{$animation-name} {
+    @content;
+  }
+  @-o-keyframes #{$animation-name} {
+    @content;
+  }
+  @keyframes #{$animation-name} {
+    @content;
+  }
+}
+
+@mixin animation($str) {
+  -webkit-animation: #{$str};
+  -moz-animation: #{$str};
+  -ms-animation: #{$str};
+  -o-animation: #{$str};
+  animation: #{$str};
+}
+
+.ring-container {
+  position: relative;
+  float: right;
+}
+.circle {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  &.Live {
+    background-color: #62bd19;
+  }
+  &.Ended {
+    background-color: #fd0b03;
+  }
+}
+.ringring {
+  -webkit-border-radius: 30px;
+  height: 25px;
+  width: 25px;
+  position: absolute;
+  left: 15px;
+  top: 15px;
+  &.Live {
+    border: 3px solid #62bd19;
+  }
+  &.Ended {
+    border: 3px solid #fd0b03;
+  }
+  @include animation("pulsate 1s ease-out");
+  animation-iteration-count: infinite;
+}
+@include keyframes(pulsate) {
+  0% {
+    -webkit-transform: scale(0.1, 0.1);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1.2, 1.2);
+    opacity: 0;
+  }
+}

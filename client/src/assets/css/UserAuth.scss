@@ -1,0 +1,37 @@
+#user-login{
+  background-color:white !important;
+}
+input[type="checkbox"] {
+  visibility: hidden;
+}
+label {
+  cursor: pointer;
+}
+input[type="checkbox"] + label:before {
+  margin-top: 4.8px;
+  margin-left: -20px;
+  margin-right: 4.8px;
+  background-color: #0002;
+  content: "\00a0";
+  display: inline-block;
+  font: 13px monospace;
+  line-height: 12px;
+  height: 13px;
+  padding: 0;
+  vertical-align: top;
+  width: 13px;
+}
+input[type="checkbox"]:checked + label:before {
+  background: #6668b1;
+  color: rgb(255, 255, 255);
+  content: "\2713";
+  text-align: center;
+  padding-top:-4.8px;
+}
+input[type="checkbox"]:checked + label:after {
+  font-weight: bold;
+}
+
+input[type="checkbox"]:focus + label::before {
+    outline: rgb(59, 153, 252) auto 5px;
+}
